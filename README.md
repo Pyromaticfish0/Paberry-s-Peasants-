@@ -23,10 +23,15 @@ The AR application will run on Android phones (see system requirements). As stud
 
 # List of Features
 F1: A main menu will be present in the application.
+
 F2: A play button will be present within the main menu.
+
 F3: AR interactions on campus, will familiarize students with Discovery Park.
+
 F4: A head-up display will be present during gameplay.
+
 F5: A mission log will be present within the HUD.
+
 F6: User’s coin balance will be present within the HUD.
 
 # Functional Requirements
