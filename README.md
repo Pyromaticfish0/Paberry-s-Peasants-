@@ -106,9 +106,7 @@ Best practices
 
 https://developers.google.com/ar/develop/java/augmented-images/guide
 
-Learn how to use Augmented Images in your own apps.
-
-Create an image database
+##### Create an image database
 
 Each image database can store information for up to 1000 images.
 
@@ -117,7 +115,7 @@ There two ways to create an AugmentedImageDatabase:
 - Load a saved image database. Then optionally add more reference images.
 - Create a new empty database. Then add reference images one at a time.
 
-Load a saved image database
+##### Load a saved image database
 
 Use ```AugmentedImageDatabase.deserialize()``` to load an existing image database:
 ```
@@ -126,13 +124,14 @@ AugmentedImageDatabase imageDatabase = AugmentedImageDatabase.deserialize(inputS
 ```
 Image databases can be created using the ```arcoreimg``` command line tool during development, or by calling ```AugmentedImageDatabase.serialize()``` on a database that contains that is loaded in memory.
 
-Create a new empty database
+##### Create a new empty database
 
 To create an empty image database at runtime, use the no-arg ```AugmentedImageDatabase()``` constructor:
 ```
 AugmentedImageDatabase imageDatabase = new AugmentedImageDatabase();
 ```
-Add images to an existing database
+
+##### Add images to an existing database
 
 Add images to your image database by calling ```AugmentedImageDatabase.addImage()``` for each image:
 ```
@@ -146,7 +145,7 @@ int index = imageDatabase.addImage("dog", bitmap, imageWidthInMeters);
 ```
 The returned indexes can later be used to identify which reference image was detected.
 
-Enable image tracking
+##### Enable image tracking
 
 Configure your ARCore session to begin tracking images by setting the session config to one that is configured with the desired image database:
 ```
