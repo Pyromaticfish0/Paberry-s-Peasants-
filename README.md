@@ -112,21 +112,21 @@ There two ways to create an AugmentedImageDatabase:
 - Load a saved image database. Then optionally add more reference images.
 - Create a new empty database. Then add reference images one at a time.
 Load a saved image database
-Use AugmentedImageDatabase.deserialize() to load an existing image database:
-
+Use ```AugmentedImageDatabase.deserialize()``` to load an existing image database:
+```
 InputStream inputStream = context.getAssets().open("example.imgdb");
 AugmentedImageDatabase imageDatabase = AugmentedImageDatabase.deserialize(inputStream);
-
-Image databases can be created using the arcoreimg command line tool during development, or by calling AugmentedImageDatabase.serialize() on a database that contains that is loaded in memory.
+```
+Image databases can be created using the ```arcoreimg``` command line tool during development, or by calling ```AugmentedImageDatabase.serialize()``` on a database that contains that is loaded in memory.
 
 Create a new empty database
-To create an empty image database at runtime, use the no-arg AugmentedImageDatabase() constructor:
-
+To create an empty image database at runtime, use the no-arg ```AugmentedImageDatabase()``` constructor:
+```
 AugmentedImageDatabase imageDatabase = new AugmentedImageDatabase();
-
+```
 Add images to an existing database
-Add images to your image database by calling AugmentedImageDatabase.addImage() for each image:
-
+Add images to your image database by calling ```AugmentedImageDatabase.addImage()``` for each image:
+```
 Bitmap bitmap;
 try (InputStream inputStream = getAssets().open("dog.jpg")) {
   bitmap = BitmapFactory.decodeStream(inputStream);
@@ -134,18 +134,19 @@ try (InputStream inputStream = getAssets().open("dog.jpg")) {
   Log.e(TAG, "I/O exception loading augmented image bitmap.", e);
 }
 int index = imageDatabase.addImage("dog", bitmap, imageWidthInMeters);
-
+```
 The returned indexes can later be used to identify which reference image was detected.
 
 Enable image tracking
 Configure your ARCore session to begin tracking images by setting the session config to one that is configured with the desired image database:
-
+```
 config.setAugmentedImageDatabase(imageDatabase);
 session.configure(config);
+```
 During the session, ARCore looks for images by matching feature points from the camera image against those in the image database.
 
-To get the matched images, poll for updated AugmentedImages in your frame update loop.
-
+To get the matched images, poll for updated ```AugmentedImage```s in your frame update loop.
+```
 // Update loop, in onDrawFrame().
 Frame frame = mSession.update();
 Collection<AugmentedImage> updatedAugmentedImages =
@@ -164,7 +165,7 @@ for (AugmentedImage img : updatedAugmentedImages) {
      }
   }
 }
-
+```
 
 #### Information Display
 **********************************************************************************************************************************
