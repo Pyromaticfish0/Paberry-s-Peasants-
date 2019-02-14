@@ -30,57 +30,44 @@ The AR application will run on Android phones (see system requirements). As stud
 - Users need a way to see their phone screen and surroundings.
 
 ### Features
-F1: 
-A main menu will be present in the application.
-
-F2: 
-A play button will be present within the main menu.
-
-F3: 
-AR interactions on campus, will familiarize students with Discovery Park.
-
-F4: 
-A head-up display will be present during gameplay.
-
-F5: 
-A mission log will be present within the HUD.
-
-F6: 
-User’s coin balance will be present within the HUD.
+- A main menu will be present in the application.
+- A play button will be present within the main menu.
+- AR interactions on campus, will familiarize students with Discovery Park.
+- A head-up display will be present during gameplay.
+- A mission log will be present within the HUD.
+- User’s coin balance will be present within the HUD.
 
 ### Functional Requirements
-R1: Main Menu
+- Main Menu
 Description: 
 After initial application launch, the system will display a main menu consisting of the following buttons: play, collect, and quit.
 
-R2: Play Button
+- Play Button
 Description: 
 The play button resides within the main menu. After touching play, the main menu will disappear, and the system will begin utilizing the camera. The game has officially started.
 
-R3: In-Game Head-up Display
+- In-Game Head-up Display
 Description: 
 The HUD will allow users to view their coin balance and mission log.
 
-R4: Coin Balance
+- Coin Balance
 Description: 
 Coins are collected throughout the game’s campaign. The coins are used as a form of in-game currency to purchase clothing / accessories in the store page.
 
-R5: Mission Log
+- Mission Log
 Description: 
 The mission log is opened by touching mission log in the HUD during gameplay. The mission log will inform the user of their current in-game objective.
 
-R6: Image Locator
+- Image Locator
 Description: 
 The system will scan room numbers which will trigger AR events.
 
-R7: Information Display
+- Information Display
 Description: 
 After AR Event has been triggered, information regarding Discovery Park(our school campus) will display to the screen. 
 
 ### Non-Functional Requirements
-NF1: The system will run on Android 7.0 or above.
-
-NF2: The system will utilize a graphical user interface.
-
-NF3: The system can analyze real life images and produce information based off of those 
+- The system will run on Android 7.0 or above.
+- The system will utilize a graphical user interface.
+- The system can analyze real life images and produce information based off of those 
 
