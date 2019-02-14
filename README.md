@@ -1,5 +1,5 @@
 # First Flight – The AR Experience
-**********************************************************************************************************************************
+
 Each Fall there is an orientation at Discovery Park for 1st-year students. It is called First Flight. Due to the building’s large size, students get horribly lost. It would be nice to have an activity that orients new students to Discovery Park and the department through Augmented Reality. 
 
 The AR application will run on Android phones (see system requirements). As students play the game, they will learn about Discovery Park’s prominent locations. Ideally, at completion of the game students will no longer feel lost. In actuality, students will feel at home.
@@ -7,7 +7,7 @@ The AR application will run on Android phones (see system requirements). As stud
 In development by the Paberry-s-Peasants-
 
 ## Table of Contents
-**********************************************************************************************************************************
+
 * [System Requirements](#system-requirements)
 * [Users Profile](#users-profile)
 * [Features](#features)
