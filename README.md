@@ -116,12 +116,14 @@ Use AugmentedImageDatabase.deserialize() to load an existing image database:
 
 InputStream inputStream = context.getAssets().open("example.imgdb");
 AugmentedImageDatabase imageDatabase = AugmentedImageDatabase.deserialize(inputStream);
+
 Image databases can be created using the arcoreimg command line tool during development, or by calling AugmentedImageDatabase.serialize() on a database that contains that is loaded in memory.
 
 Create a new empty database
 To create an empty image database at runtime, use the no-arg AugmentedImageDatabase() constructor:
 
 AugmentedImageDatabase imageDatabase = new AugmentedImageDatabase();
+
 Add images to an existing database
 Add images to your image database by calling AugmentedImageDatabase.addImage() for each image:
 
@@ -132,6 +134,7 @@ try (InputStream inputStream = getAssets().open("dog.jpg")) {
   Log.e(TAG, "I/O exception loading augmented image bitmap.", e);
 }
 int index = imageDatabase.addImage("dog", bitmap, imageWidthInMeters);
+
 The returned indexes can later be used to identify which reference image was detected.
 
 Enable image tracking
