@@ -71,6 +71,8 @@ Images can be compiled offline to create an image database, or individual images
 
 From https://developers.google.com/ar/develop/java/augmented-images/ on Augmented Images
 
+Augmented Images in ARCore lets you build AR apps that can respond to 2D images, such as posters or product packaging, in the user's environment. You provide a set of reference images, and ARCore tracking tells you where those images are physically located in an AR session, once they are detected in the camera view.
+
 ##### Is Augmented Images is Suitable for our App:
 
 - Each image database can store feature point information for up to 1000 reference images.
