@@ -1,27 +1,35 @@
 # First Flight – The AR Experience
 In development by the Paberry-s-Peasants-
 
-# Problem Statement:
+## Contents
+* [Problem](#problem)
+* [System Requirements](#system-requirements)
+* [Users Profile](#users-profile)
+* [Features](#features)
+* [Functional Requirements](#functional-requirements)
+* [Nonfunctional Requirements](#nonfunctional-requirements)
+
+### Problem:
 
 Each Fall there is an orientation at Discovery Park for 1st-year students. It is called First Flight. Due to the building’s large size, students get horribly lost. It would be nice to have an activity that orients new students to Discovery Park and the department through Augmented Reality. 
 
 The AR application will run on Android phones (see system requirements). As students play the game, they will learn about Discovery Park’s prominent locations. Ideally, at completion of the game students will no longer feel lost. In actuality, students will feel at home.
 
-# System Requirements:
+### System Requirements:
 - Android 7.0 or higher
 - Preferred resolution of 720×1280 pixels (Not optimized for tablet)
 - Strong internet connection (Wi-Fi, 3G, or 4G)
 - GPS and Location Services
 - Intel CPUs are not supported
 
-# Users Profile
+### Users Profile
 - The application is intended for 1st year students at University of North Texas. 
 - Users need basic reading abilities (5th Grade or above reading level). 
 - Users need a way to move a smart phone around to interact with AR features.
 - Users need a way to navigate around / through Discovery Park. 
 - Users need a way to see their phone screen and surroundings.
 
-# List of Features
+### Features
 F1: 
 A main menu will be present in the application.
 
@@ -40,7 +48,7 @@ A mission log will be present within the HUD.
 F6: 
 User’s coin balance will be present within the HUD.
 
-# Functional Requirements
+### Functional Requirements
 R1: Main Menu
 Description: 
 After initial application launch, the system will display a main menu consisting of the following buttons: play, collect, and quit.
@@ -69,7 +77,7 @@ R7: Information Display
 Description: 
 After AR Event has been triggered, information regarding Discovery Park(our school campus) will display to the screen. 
 
-# Non-Functional Requirements
+### Non-Functional Requirements
 NF1: The system will run on Android 7.0 or above.
 
 NF2: The system will utilize a graphical user interface.
