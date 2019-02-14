@@ -68,6 +68,37 @@ From https://developers.google.com/ar/discover/concepts on Augmented Images
 Augmented Images allows you to build AR apps that can respond to specific 2D images such as product packaging or movie posters. Users can trigger AR experiences when they point their phone's camera at specific images - for instance, they could point their phone's camera at a movie poster and have a character pop out and enact a scene.
 
 Images can be compiled offline to create an image database, or individual images can be added in real time from the device. Once registered, ARCore will detect these images, the images boundaries, and return a corresponding pose.
+
+From https://developers.google.com/ar/develop/java/augmented-images/ on Augmented Images
+
+##### Is Augmented Images is Suitable for our App:
+
+- Each image database can store feature point information for up to 1000 reference images.
+- ARCore can track up to 20 images simultaneously in the environment, but it cannot track multiple instances of the same image.
+- The physical image in the environment must be at least 15cm x 15cm and must be flat (for example, not wrinkled or wrapped around a bottle)
+- Once tracked, ARCore provides estimates for position, orientation, and physical size. These estimates are continuously refined as ARCore gathers more data.
+- ARCore cannot track a moving image, but it can resume tracking that image after it stops moving.
+- All tracking happens on the device, so no internet connection is required. Reference images can be updated on-device or over the network without requiring an app update.
+Best practices
+
+##### Tips for selecting reference images
+- Augmented Images supports PNG and JPEG file formats. For JPEG files, avoid heavy compression for best performance.
+- Detection is solely based on points of high contrast, so both color and black/white images are detected, regardless of whether a color or black/white reference image is used.
+- The image's resolution should be at least 300 x 300 pixels.
+- Using images with high resolution does not improve performance.
+- Avoid images with sparse features.
+- Avoid images with repetitive features.
+- A good reference image is hard to spot with the human eye. Use the arcoreimg tool to get a score between 0 and 100 for each image. We recommend a score of at least 75. Here are two examples: see website for image
+
+##### Tips for creating the image database
+- The database stores a compressed representation of the reference images. Each image occupies ~6KB.
+- It takes ~30ms to add an image to the database at runtime. Add images on a worker thread to avoid blocking the UI thread, or if possible, add images at compile time with the arcoreimg tool.
+- If possible, specify the expected physical size of the image. This metadata improves tracking performance, especially for large physical images (over 75cm).
+- Don't keep unused images in the database as there's a slight impact on system performance.
+
+##### Tips for optimizing tracking
+- The physical image must occupy 40% of the camera image. You can prompt users to fit the physical image in their camera frame with the FitToScan asset. See the Augmented Images sample app for an example of this prompt.
+- When an image is initially detected by ARCore, and no expected physical size was specified, its tracking state will be paused. This means that ARCore has recognized the image, but has not gathered enough data to estimate its location in 3D space. Developers should not use the image's pose and size estimates until the image's tracking state is tracking.
 **********************************************************************************************************************************
 
 
