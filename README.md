@@ -65,13 +65,13 @@ The mission log is opened by touching mission log in the HUD during gameplay. Th
 
 The system will scan room numbers which will trigger AR events.
 
-##### From https://developers.google.com/ar/discover/concepts on Augmented Images
+From https://developers.google.com/ar/discover/concepts on Augmented Images
 
 Augmented Images allows you to build AR apps that can respond to specific 2D images such as product packaging or movie posters. Users can trigger AR experiences when they point their phone's camera at specific images - for instance, they could point their phone's camera at a movie poster and have a character pop out and enact a scene.
 
 Images can be compiled offline to create an image database, or individual images can be added in real time from the device. Once registered, ARCore will detect these images, the images boundaries, and return a corresponding pose.
 
-##### From https://developers.google.com/ar/develop/java/augmented-images/ on Augmented Images
+From https://developers.google.com/ar/develop/java/augmented-images/ on Augmented Images
 
 Augmented Images in ARCore lets you build AR apps that can respond to 2D images, such as posters or product packaging, in the user's environment. You provide a set of reference images, and ARCore tracking tells you where those images are physically located in an AR session, once they are detected in the camera view.
 
@@ -104,7 +104,7 @@ Best practices
 - The physical image must occupy 40% of the camera image. You can prompt users to fit the physical image in their camera frame with the FitToScan asset. See the Augmented Images sample app for an example of this prompt.
 - When an image is initially detected by ARCore, and no expected physical size was specified, its tracking state will be paused. This means that ARCore has recognized the image, but has not gathered enough data to estimate its location in 3D space. Developers should not use the image's pose and size estimates until the image's tracking state is tracking.
 
-##### From https://developers.google.com/ar/develop/java/augmented-images/guide
+From https://developers.google.com/ar/develop/java/augmented-images/guide
 Learn how to use Augmented Images in your own apps.
 
 Create an image database
