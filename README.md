@@ -38,39 +38,40 @@ The AR application will run on Android phones (see system requirements). As stud
 - User’s coin balance will be present within the HUD.
 
 ### Functional Requirements
-- Main Menu
+#### Main Menu
 
 After initial application launch, the system will display a main menu consisting of the following buttons: play, collect, and quit.
 
-- Play Button
+#### Play Button
 
 The play button resides within the main menu. After touching play, the main menu will disappear, and the system will begin utilizing the camera. The game has officially started.
 
-- In-Game Head-up Display
+#### In-Game Head-up Display
 
 The HUD will allow users to view their coin balance and mission log.
 
-- Coin Balance
+#### Coin Balance
 
 Coins are collected throughout the game’s campaign. The coins are used as a form of in-game currency to purchase clothing / accessories in the store page.
 
-- Mission Log
+#### Mission Log
 
 The mission log is opened by touching mission log in the HUD during gameplay. The mission log will inform the user of their current in-game objective.
 
 **********************************************************************************************************************************
-- Augmented Images
+#### Augmented Images
 
 The system will scan room numbers which will trigger AR events.
 
 From https://developers.google.com/ar/discover/concepts on Augmented Images
+
 Augmented Images allows you to build AR apps that can respond to specific 2D images such as product packaging or movie posters. Users can trigger AR experiences when they point their phone's camera at specific images - for instance, they could point their phone's camera at a movie poster and have a character pop out and enact a scene.
 
 Images can be compiled offline to create an image database, or individual images can be added in real time from the device. Once registered, ARCore will detect these images, the images boundaries, and return a corresponding pose.
 **********************************************************************************************************************************
 
 
-- Information Display
+#### Information Display
  
 After AR Event has been triggered, information regarding Discovery Park(our school campus) will display to the screen. 
 
