@@ -39,30 +39,29 @@ The AR application will run on Android phones (see system requirements). As stud
 
 ### Functional Requirements
 #### Main Menu
-
+**********************************************************************************************************************************
 After initial application launch, the system will display a main menu consisting of the following buttons: play, collect, and quit.
 
 #### Play Button
-
+**********************************************************************************************************************************
 The play button resides within the main menu. After touching play, the main menu will disappear, and the system will begin utilizing the camera. The game has officially started.
 
 #### In-Game Head-up Display
-
+**********************************************************************************************************************************
 The HUD will allow users to view their coin balance and mission log.
 
 #### Coin Balance
-
+**********************************************************************************************************************************
 Coins are collected throughout the game’s campaign. The coins are used as a form of in-game currency to purchase clothing / accessories in the store page.
 
 #### Mission Log
-
+**********************************************************************************************************************************
 The mission log is opened by touching mission log in the HUD during gameplay. The mission log will inform the user of their current in-game objective.
 
-
 #### Augmented Images
-
-The system will scan room numbers which will trigger AR events.
 **********************************************************************************************************************************
+The system will scan room numbers which will trigger AR events.
+
 ##### From https://developers.google.com/ar/discover/concepts on Augmented Images
 
 Augmented Images allows you to build AR apps that can respond to specific 2D images such as product packaging or movie posters. Users can trigger AR experiences when they point their phone's camera at specific images - for instance, they could point their phone's camera at a movie poster and have a character pop out and enact a scene.
@@ -101,11 +100,71 @@ Best practices
 ##### Tips for optimizing tracking
 - The physical image must occupy 40% of the camera image. You can prompt users to fit the physical image in their camera frame with the FitToScan asset. See the Augmented Images sample app for an example of this prompt.
 - When an image is initially detected by ARCore, and no expected physical size was specified, its tracking state will be paused. This means that ARCore has recognized the image, but has not gathered enough data to estimate its location in 3D space. Developers should not use the image's pose and size estimates until the image's tracking state is tracking.
-**********************************************************************************************************************************
+
+##### From https://developers.google.com/ar/develop/java/augmented-images/guide
+Learn how to use Augmented Images in your own apps.
+
+Create an image database
+Each image database can store information for up to 1000 images.
+
+There two ways to create an AugmentedImageDatabase:
+
+- Load a saved image database. Then optionally add more reference images.
+- Create a new empty database. Then add reference images one at a time.
+Load a saved image database
+Use AugmentedImageDatabase.deserialize() to load an existing image database:
+
+InputStream inputStream = context.getAssets().open("example.imgdb");
+AugmentedImageDatabase imageDatabase = AugmentedImageDatabase.deserialize(inputStream);
+Image databases can be created using the arcoreimg command line tool during development, or by calling AugmentedImageDatabase.serialize() on a database that contains that is loaded in memory.
+
+Create a new empty database
+To create an empty image database at runtime, use the no-arg AugmentedImageDatabase() constructor:
+
+AugmentedImageDatabase imageDatabase = new AugmentedImageDatabase();
+Add images to an existing database
+Add images to your image database by calling AugmentedImageDatabase.addImage() for each image:
+
+Bitmap bitmap;
+try (InputStream inputStream = getAssets().open("dog.jpg")) {
+  bitmap = BitmapFactory.decodeStream(inputStream);
+} catch (IOException e) {
+  Log.e(TAG, "I/O exception loading augmented image bitmap.", e);
+}
+int index = imageDatabase.addImage("dog", bitmap, imageWidthInMeters);
+The returned indexes can later be used to identify which reference image was detected.
+
+Enable image tracking
+Configure your ARCore session to begin tracking images by setting the session config to one that is configured with the desired image database:
+
+config.setAugmentedImageDatabase(imageDatabase);
+session.configure(config);
+During the session, ARCore looks for images by matching feature points from the camera image against those in the image database.
+
+To get the matched images, poll for updated AugmentedImages in your frame update loop.
+
+// Update loop, in onDrawFrame().
+Frame frame = mSession.update();
+Collection<AugmentedImage> updatedAugmentedImages =
+  frame.getUpdatedTrackables(AugmentedImage.class);
+
+for (AugmentedImage img : updatedAugmentedImages) {
+  // Developers can:
+  // 1. Check tracking state.
+  // 2. Render something based on the pose, or attach an anchor.
+  if (img.getTrackingState() == TrackingState.TRACKING) {
+     // You can also check which image this is based on getName().
+     if (img.getIndex() == dogIndex) {
+       // TODO: Render a 3D version of a dog in front of img.getCenterPose().
+     } else if (img.getIndex() == catIndex) {
+       // TODO: Render a 3D version of a cat in front of img.getCenterPose().
+     }
+  }
+}
 
 
 #### Information Display
- 
+**********************************************************************************************************************************
 After AR Event has been triggered, information regarding Discovery Park(our school campus) will display to the screen. 
 
 ### Non-Functional Requirements
