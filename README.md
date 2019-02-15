@@ -66,17 +66,13 @@ The mission log is opened by touching mission log in the HUD during gameplay. Th
 Users can spend their coins on in-game 
 
 #### Augmented Images
-https://developers.google.com/ar/discover/concepts
-https://developers.google.com/ar/develop/java/augmented-images/
-https://developers.google.com/ar/develop/java/augmented-images/guide
-
-The system will scan room numbers which will trigger AR events.
-
-Augmented Images allows you to build AR apps that can respond to specific 2D images such as product packaging or movie posters. Users can trigger AR experiences when they point their phone's camera at specific images - for instance, they could point their phone's camera at a movie poster and have a character pop out and enact a scene.
-
-Images can be compiled offline to create an image database, or individual images can be added in real time from the device. Once registered, ARCore will detect these images, the images boundaries, and return a corresponding pose.
-
-Augmented Images in ARCore lets you build AR apps that can respond to 2D images, such as posters or product packaging, in the user's environment. You provide a set of reference images, and ARCore tracking tells you where those images are physically located in an AR session, once they are detected in the camera view.
+- https://developers.google.com/ar/discover/concepts
+- https://developers.google.com/ar/develop/java/augmented-images/
+- https://developers.google.com/ar/develop/java/augmented-images/guide
+- The system will scan room numbers which will trigger AR events.
+- Augmented Images allows you to build AR apps that can respond to specific 2D images such as product packaging or movie posters. Users can trigger AR experiences when they point their phone's camera at specific images - for instance, they could point their phone's camera at a movie poster and have a character pop out and enact a scene.
+- Images can be compiled offline to create an image database, or individual images can be added in real time from the device. Once registered, ARCore will detect these images, the images boundaries, and return a corresponding pose.
+- Augmented Images in ARCore lets you build AR apps that can respond to 2D images, such as posters or product packaging, in the user's environment. You provide a set of reference images, and ARCore tracking tells you where those images are physically located in an AR session, once they are detected in the camera view.
 
 ##### Is Augmented Images is Suitable for our App:
 
