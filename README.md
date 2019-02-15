@@ -56,25 +56,25 @@ After initial application launch, the system will display a main menu consisting
 
 The play button resides within the main menu. After touching play, the main menu will disappear, and the system will begin utilizing the camera. The game has officially started.
 
+#### Shop Button
+
+The shop button resides in the main menu. After touching shop, the user is take to the shop page.
+
+#### Shop Page
+
+Users can spend their coins on in-game skins.
+
 #### Head-up Display
 
 The HUD will allow users to view their coin balance and mission log during gameplay.
 
 #### Coin Balance
 
-Coins are collected throughout the game’s campaign. The coins are used as a form of in-game currency to purchase clothing / accessories in the store page.
+Coins are collected throughout the game’s campaign. The coins are used as a form of in-game currency to purchase in-game skins in the store page.
 
 #### Mission Log
 
 The mission log is opened by touching mission log in the HUD during gameplay. The mission log will inform the user of their current in-game objective.
-
-#### Shop Button
-
-Users can spend their coins on in-game 
-
-#### Shop Page
-
-Users can spend their coins on in-game 
 
 #### Augmented Images
 - https://developers.google.com/ar/discover/concepts
