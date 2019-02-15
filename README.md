@@ -13,6 +13,12 @@ In development by the Paberry-s-Peasants-
 * [Features](#features)
 * [Functional Requirements](#functional-requirements)
   * [Main Menu](#main-menu)
+  * [Play Button](#play-button)
+  * [Head-up Display](#head-up-display)
+  * [Coin Balance](#coin-balance)
+  * [Shop Button](#mission-log)
+  * [Shop Page](#shop-page)
+  * [Augmented Images](#augmented-images)
 * [Nonfunctional Requirements](#nonfunctional-requirements)
 
 ### System Requirements:
@@ -50,9 +56,9 @@ After initial application launch, the system will display a main menu consisting
 
 The play button resides within the main menu. After touching play, the main menu will disappear, and the system will begin utilizing the camera. The game has officially started.
 
-#### In-Game Head-up Display
+#### Head-up Display
 
-The HUD will allow users to view their coin balance and mission log.
+The HUD will allow users to view their coin balance and mission log during gameplay.
 
 #### Coin Balance
 
@@ -61,6 +67,10 @@ Coins are collected throughout the game’s campaign. The coins are used as a fo
 #### Mission Log
 
 The mission log is opened by touching mission log in the HUD during gameplay. The mission log will inform the user of their current in-game objective.
+
+#### Shop Button
+
+Users can spend their coins on in-game 
 
 #### Shop Page
 
@@ -170,10 +180,6 @@ for (AugmentedImage img : updatedAugmentedImages) {
   }
 }
 ```
-
-#### Information Display
-
-After AR Event has been triggered, information regarding Discovery Park(our school campus) will display to the screen. 
 
 ### Non-Functional Requirements
 **********************************************************************************************************************************
