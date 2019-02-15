@@ -105,9 +105,7 @@ Users can spend their coins on in-game
 ##### Create an image database
 
 - Each image database can store information for up to 1000 images.
-
-There two ways to create an AugmentedImageDatabase:
-
+- There two ways to create an AugmentedImageDatabase:
 - Load a saved image database. Then optionally add more reference images.
 - Create a new empty database. Then add reference images one at a time.
 
@@ -151,7 +149,7 @@ session.configure(config);
 - During the session, ARCore looks for images by matching feature points from the camera image against those in the image database.
 
 - To get the matched images, poll for updated ```AugmentedImage```s in your frame update loop.
-```
+```java
 // Update loop, in onDrawFrame().
 Frame frame = mSession.update();
 Collection<AugmentedImage> updatedAugmentedImages =
