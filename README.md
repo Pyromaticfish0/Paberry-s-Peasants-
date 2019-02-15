@@ -111,23 +111,23 @@ Users can spend their coins on in-game
 
 ##### Load a saved image database
 
-- Use ```java AugmentedImageDatabase.deserialize()``` to load an existing image database:
+- Use ```AugmentedImageDatabase.deserialize()``` to load an existing image database:
 ```java
 InputStream inputStream = context.getAssets().open("example.imgdb");
 AugmentedImageDatabase imageDatabase = AugmentedImageDatabase.deserialize(inputStream);
 ```
-- Image databases can be created using the ```java arcoreimg``` command line tool during development, or by calling ```java AugmentedImageDatabase.serialize()``` on a database that contains that is loaded in memory.
+- Image databases can be created using the ```arcoreimg``` command line tool during development, or by calling ``` AugmentedImageDatabase.serialize()``` on a database that contains that is loaded in memory.
 
 ##### Create a new empty database
 
-- To create an empty image database at runtime, use the no-arg ```java AugmentedImageDatabase()``` constructor:
+- To create an empty image database at runtime, use the no-arg ```AugmentedImageDatabase()``` constructor:
 ```java
 AugmentedImageDatabase imageDatabase = new AugmentedImageDatabase();
 ```
 
 ##### Add images to an existing database
 
-- Add images to your image database by calling ```java AugmentedImageDatabase.addImage()``` for each image:
+- Add images to your image database by calling ```AugmentedImageDatabase.addImage()``` for each image:
 ```java
 Bitmap bitmap;
 try (InputStream inputStream = getAssets().open("dog.jpg")) {
