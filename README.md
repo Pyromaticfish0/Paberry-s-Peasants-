@@ -12,6 +12,7 @@ In development by the Paberry-s-Peasants-
 * [Users Profile](#users-profile)
 * [Features](#features)
 * [Functional Requirements](#functional-requirements)
+  * [Main Menu](#main-menu)
 * [Nonfunctional Requirements](#nonfunctional-requirements)
 
 ### System Requirements:
