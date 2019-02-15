@@ -43,7 +43,7 @@ In development by the Paberry-s-Peasants-
 **********************************************************************************************************************************
 #### Main Menu
 
-After initial application launch, the system will display a main menu consisting of the following buttons: play, collect, and quit.
+After initial application launch, the system will display a main menu consisting of the following buttons: play, shop, and quit.
 
 #### Play Button
 
@@ -61,17 +61,20 @@ Coins are collected throughout the game’s campaign. The coins are used as a fo
 
 The mission log is opened by touching mission log in the HUD during gameplay. The mission log will inform the user of their current in-game objective.
 
+#### Shop Page
+
+Users can spend their coins on in-game 
+
 #### Augmented Images
+https://developers.google.com/ar/discover/concepts
+https://developers.google.com/ar/develop/java/augmented-images/
+https://developers.google.com/ar/develop/java/augmented-images/guide
 
 The system will scan room numbers which will trigger AR events.
-
-https://developers.google.com/ar/discover/concepts
 
 Augmented Images allows you to build AR apps that can respond to specific 2D images such as product packaging or movie posters. Users can trigger AR experiences when they point their phone's camera at specific images - for instance, they could point their phone's camera at a movie poster and have a character pop out and enact a scene.
 
 Images can be compiled offline to create an image database, or individual images can be added in real time from the device. Once registered, ARCore will detect these images, the images boundaries, and return a corresponding pose.
-
-https://developers.google.com/ar/develop/java/augmented-images/
 
 Augmented Images in ARCore lets you build AR apps that can respond to 2D images, such as posters or product packaging, in the user's environment. You provide a set of reference images, and ARCore tracking tells you where those images are physically located in an AR session, once they are detected in the camera view.
 
@@ -83,7 +86,6 @@ Augmented Images in ARCore lets you build AR apps that can respond to 2D images,
 - Once tracked, ARCore provides estimates for position, orientation, and physical size. These estimates are continuously refined as ARCore gathers more data.
 - ARCore cannot track a moving image, but it can resume tracking that image after it stops moving.
 - All tracking happens on the device, so no internet connection is required. Reference images can be updated on-device or over the network without requiring an app update.
-Best practices
 
 ##### Tips for selecting reference images
 - Augmented Images supports PNG and JPEG file formats. For JPEG files, avoid heavy compression for best performance.
@@ -103,8 +105,6 @@ Best practices
 ##### Tips for optimizing tracking
 - The physical image must occupy 40% of the camera image. You can prompt users to fit the physical image in their camera frame with the FitToScan asset. See the Augmented Images sample app for an example of this prompt.
 - When an image is initially detected by ARCore, and no expected physical size was specified, its tracking state will be paused. This means that ARCore has recognized the image, but has not gathered enough data to estimate its location in 3D space. Developers should not use the image's pose and size estimates until the image's tracking state is tracking.
-
-https://developers.google.com/ar/develop/java/augmented-images/guide
 
 ##### Create an image database
 
