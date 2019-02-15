@@ -82,9 +82,6 @@ Coins are collected throughout the game’s campaign. The coins are used as a fo
 The mission log is opened by touching mission log in the HUD during gameplay. The mission log will inform the user of their current in-game objective.
 
 #### Augmented Images
-- https://developers.google.com/ar/discover/concepts
-- https://developers.google.com/ar/develop/java/augmented-images/
-- https://developers.google.com/ar/develop/java/augmented-images/guide
 - The system will scan room numbers which will trigger AR events.
 - Augmented Images allows you to build AR apps that can respond to specific 2D images such as product packaging or movie posters. Users can trigger AR experiences when they point their phone's camera at specific images - for instance, they could point their phone's camera at a movie poster and have a character pop out and enact a scene.
 - Images can be compiled offline to create an image database, or individual images can be added in real time from the device. Once registered, ARCore will detect these images, the images boundaries, and return a corresponding pose.
@@ -182,6 +179,9 @@ for (AugmentedImage img : updatedAugmentedImages) {
   }
 }
 ```
+- https://developers.google.com/ar/discover/concepts
+- https://developers.google.com/ar/develop/java/augmented-images/
+- https://developers.google.com/ar/develop/java/augmented-images/guide
 
 ### Non-Functional Requirements
 **********************************************************************************************************************************
