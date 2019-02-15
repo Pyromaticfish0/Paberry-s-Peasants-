@@ -14,10 +14,11 @@ In development by the Paberry-s-Peasants-
 * [Functional Requirements](#functional-requirements)
   * [Main Menu](#main-menu)
   * [Play Button](#play-button)
+  * [Shop Button](#mission-log)
+  * [Quit Button](#quit-button)
+  * [Shop Page](#shop-page)
   * [Head-up Display](#head-up-display)
   * [Coin Balance](#coin-balance)
-  * [Shop Button](#mission-log)
-  * [Shop Page](#shop-page)
   * [Augmented Images](#augmented-images)
 * [Nonfunctional Requirements](#nonfunctional-requirements)
 
@@ -60,6 +61,10 @@ The play button resides within the main menu. After touching play, the main menu
 
 The shop button resides in the main menu. After touching shop, the user is take to the shop page.
 
+#### Quit Button
+
+The quit button resides in the main menu. after touching quit, the application will exit.
+
 #### Shop Page
 
 Users can spend their coins on in-game skins.
@@ -85,7 +90,7 @@ The mission log is opened by touching mission log in the HUD during gameplay. Th
 - Images can be compiled offline to create an image database, or individual images can be added in real time from the device. Once registered, ARCore will detect these images, the images boundaries, and return a corresponding pose.
 - Augmented Images in ARCore lets you build AR apps that can respond to 2D images, such as posters or product packaging, in the user's environment. You provide a set of reference images, and ARCore tracking tells you where those images are physically located in an AR session, once they are detected in the camera view.
 
-##### Is Augmented Images is Suitable for our App:
+##### Is Augmented Images is Suitable for our App
 
 - Each image database can store feature point information for up to 1000 reference images.
 - ARCore can track up to 20 images simultaneously in the environment, but it cannot track multiple instances of the same image.
@@ -94,7 +99,7 @@ The mission log is opened by touching mission log in the HUD during gameplay. Th
 - ARCore cannot track a moving image, but it can resume tracking that image after it stops moving.
 - All tracking happens on the device, so no internet connection is required. Reference images can be updated on-device or over the network without requiring an app update.
 
-##### Tips for selecting reference images
+##### Select Reference Images
 - Augmented Images supports PNG and JPEG file formats. For JPEG files, avoid heavy compression for best performance.
 - Detection is solely based on points of high contrast, so both color and black/white images are detected, regardless of whether a color or black/white reference image is used.
 - The image's resolution should be at least 300 x 300 pixels.
@@ -103,24 +108,21 @@ The mission log is opened by touching mission log in the HUD during gameplay. Th
 - Avoid images with repetitive features.
 - A good reference image is hard to spot with the human eye. Use the arcoreimg tool to get a score between 0 and 100 for each image. We recommend a score of at least 75. Here are two examples: see website for image
 
-##### Tips for creating the image database
+##### Optimize Tracking
+- The physical image must occupy 40% of the camera image. You can prompt users to fit the physical image in their camera frame with the FitToScan asset. See the Augmented Images sample app for an example of this prompt.
+- When an image is initially detected by ARCore, and no expected physical size was specified, its tracking state will be paused. This means that ARCore has recognized the image, but has not gathered enough data to estimate its location in 3D space. Developers should not use the image's pose and size estimates until the image's tracking state is tracking.
+
+##### Create Image Database
 - The database stores a compressed representation of the reference images. Each image occupies ~6KB.
 - It takes ~30ms to add an image to the database at runtime. Add images on a worker thread to avoid blocking the UI thread, or if possible, add images at compile time with the arcoreimg tool.
 - If possible, specify the expected physical size of the image. This metadata improves tracking performance, especially for large physical images (over 75cm).
 - Don't keep unused images in the database as there's a slight impact on system performance.
-
-##### Tips for optimizing tracking
-- The physical image must occupy 40% of the camera image. You can prompt users to fit the physical image in their camera frame with the FitToScan asset. See the Augmented Images sample app for an example of this prompt.
-- When an image is initially detected by ARCore, and no expected physical size was specified, its tracking state will be paused. This means that ARCore has recognized the image, but has not gathered enough data to estimate its location in 3D space. Developers should not use the image's pose and size estimates until the image's tracking state is tracking.
-
-##### Create an image database
-
 - Each image database can store information for up to 1000 images.
 - There two ways to create an AugmentedImageDatabase:
 - Load a saved image database. Then optionally add more reference images.
 - Create a new empty database. Then add reference images one at a time.
 
-##### Load a saved image database
+##### Load Saved Image Database
 
 - Use ```AugmentedImageDatabase.deserialize()``` to load an existing image database:
 ```java
@@ -129,14 +131,14 @@ AugmentedImageDatabase imageDatabase = AugmentedImageDatabase.deserialize(inputS
 ```
 - Image databases can be created using the ```arcoreimg``` command line tool during development, or by calling ``` AugmentedImageDatabase.serialize()``` on a database that contains that is loaded in memory.
 
-##### Create a new empty database
+##### Create New Empty Database
 
 - To create an empty image database at runtime, use the no-arg ```AugmentedImageDatabase()``` constructor:
 ```java
 AugmentedImageDatabase imageDatabase = new AugmentedImageDatabase();
 ```
 
-##### Add images to an existing database
+##### Add Images to Existing Database
 
 - Add images to your image database by calling ```AugmentedImageDatabase.addImage()``` for each image:
 ```java
@@ -150,7 +152,7 @@ int index = imageDatabase.addImage("dog", bitmap, imageWidthInMeters);
 ```
 - The returned indexes can later be used to identify which reference image was detected.
 
-##### Enable image tracking
+##### Enable Image Tracking
 
 - Configure your ARCore session to begin tracking images by setting the session config to one that is configured with the desired image database:
 ```java
