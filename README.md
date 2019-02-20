@@ -21,7 +21,7 @@ In development by the Paberry-s-Peasants-
   * [Coin Balance](#coin-balance)
   * [Augmented Images](#augmented-images)
 * [Nonfunctional Requirements](#nonfunctional-requirements)
-* [Problems](#problems)
+* [Ideas and Tips](#ideas-and-tips)
 
 ### System Requirements:
 **********************************************************************************************************************************
