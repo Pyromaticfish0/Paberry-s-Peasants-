@@ -22,7 +22,21 @@ In development by the Paberry-s-Peasants-
   * [Augmented Images](#augmented-images)
 * [Nonfunctional Requirements](#nonfunctional-requirements)
 * [Ideas and Tips](#ideas-and-tips)
-
+  * [Automatic Placement](#automatic-placement)
+  * [Scale and gameplay](#scale-and-gameplay)
+  * [Initialization](#initialization)
+  * [Interface](#interface)
+  * [Easy Controls](#easy-controls)
+  * [Onboarding and Instructions](#onboarding-and-instructions)
+  * [Landscape and Portrait](#landscape-and-portrait)
+  * [Errors](#errors)
+  * [Permissions](#permissions)
+  * [The Physical Environment Problem](#the-physical-enironment-problem)
+  * [Environmental Limitations](#environmental-limitations)
+  * [User Movement](#user-movement)
+  * [Accessibility](#accessibility)
+  * [Safety & Comfort](#safety-and comfort)  
+  
 ### System Requirements:
 **********************************************************************************************************************************
 - ARCore supported phone
@@ -297,22 +311,22 @@ Automatic placement works best when:
 - For instance, if the app needs access to the camera for AR to work, or the user’s position for multiplayer experiences, let them know.
 
 #### The Physical Environment Problem
-Public spaces provide their own set of challenges for AR: 
+- Public spaces provide their own set of challenges for AR: 
 - Tracking and occlusion become difficult, depending on the number of objects and people around
 - Phone movement and AR immersion can be distracting or dangerous
 
 #### Environmental Limitations
-For now, limitations that may hinder accurate understanding of surfaces include:
+- For now, limitations that may hinder accurate understanding of surfaces include:
 - Flat surfaces without texture, such as a white desk
 - Environments with dim lighting
 - Extremely bright environments
 - Transparent or reflective surfaces like glass
 - Dynamic or moving surfaces, such as blades of grass or ripples in water
-Possible Solutions:
+- Possible Solutions:
 - When users encounter environmental limitations, indicate what went wrong and point them in the right direction.
 
 #### User Movement
-The user will be moving around in a real-world space:
+- The user will be moving around in a real-world space:
 - Let users know what movements will trigger the app
 - Guide them through the types and range of movement possible
 - Make easy transitions from one pose or movement to another
@@ -320,14 +334,15 @@ The user will be moving around in a real-world space:
 - Try not to require movement until it’s necessary. Getting users to move is a great way to engage them, but let them ease into the experience.
 
 #### Accessibility
-If a user is not able to move around, give them an alternative way to use your app:
+- If a user is not able to move around, give them an alternative way to use your app:
 - When the user is supposed to move closer to a target, give another way to access the target. 
 - Whenever it’s possible, let users tap objects and move them closer, or offer a reticle to help users reach faraway objects. 
 - Place text and instructions so they’re visible from every angle.
 - Let the user move and rotate an object in case they can’t physically move around it
 
-#### Safety & Comfort
-Sometimes, users can get too immersed in an AR experience. When they pay attention to the phone’s camera and ignore the real world, users can bump into objects, people, and might not notice hazards around them.
+#### Safety and Comfort
+- Sometimes, users can get too immersed in an AR experience. 
+- When they pay attention to the phone’s camera and ignore the real world, users can bump into objects, people, and might not notice hazards around them.
 - Build in reminders to look around, and sporadically remind them to check their surroundings.
 - Don’t make users walk backward
 - The danger of bumping into furniture, small animals, or other objects is much greater when a user is moving backward.
