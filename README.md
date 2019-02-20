@@ -197,7 +197,6 @@ for (AugmentedImage img : updatedAugmentedImages) {
 #### Automatic Placement
 It’s possible for the app itself to populate a scene. Once a surface is detected, the app can start placing objects immediately.
 Automatic placement works best when:
-
 - A virtual environment is added, without any user input, into the real-world space
 - There’s no interaction, or minimal interaction
 - It doesn’t matter if objects appear in exactly the right spot
@@ -205,19 +204,23 @@ Automatic placement works best when:
 - AR mode starts when the experience is launched
 
 #### Scale and gameplay
-Playing with scale can add an unexpected aspect to an experience. Being surprised by a huge virtual character, depending on your intention, can be either hilariously surprising or absolutely terrifying. Depending on your goals and the effect you’re trying to create, you can use surprise as a tool to evoke different emotions, whether a horror game or a silly playground.
-You can also communicate scale with sound effects. Alter the scale and pitch of a sound to deepen the user’s immersion in your experience.
+- Playing with scale can add an unexpected aspect to an experience. 
+- Being surprised by a huge virtual character, depending on your intention, can be either hilariously surprising or absolutely terrifying. 
+- Depending on your goals and the effect you’re trying to create, you can use surprise as a tool to evoke different emotions, whether a horror game or a silly playground.
+- You can also communicate scale with sound effects. 
+- Alter the scale and pitch of a sound to deepen the user’s immersion in your experience.
 
 #### Initialization
 - Make a clear transition into AR
-- Use visuals to let users know they’re about to transition from a 2D screen into AR. 
-- You can dim the phone display or use effects to blur the screen when a transition is about to take place.
+ - Use visuals to let users know they’re about to transition from a 2D screen into AR. 
+ - You can dim the phone display or use effects to blur the screen when a transition is about to take place.
 - In some apps, only one part of the experience will take place in AR.
 - Try to give the user a seamless transition to AR. 
 - Let the user launch the transition from a 2D interface to AR. 
-- It’s less jarring when the user is in control.
-- You can include a button, such as an AR icon, to let users trigger the launch themselves.
-- Send the user gently into your AR environment. Use an easy transition, like an animation or a fade out.
+ - It’s less jarring when the user is in control.
+ - You can include a button, such as an AR icon, to let users trigger the launch themselves.
+- Send the user gently into your AR environment. 
+ - Use an easy transition, like an animation or a fade out.
 - To transition the user into AR, fade from a 2D screen to the AR experience
 
 #### Interface
@@ -236,30 +239,30 @@ You can also communicate scale with sound effects. Alter the scale and pitch of 
 - Make the controls so easy, users won’t have to think about what they mean
 - It’s best to keep the user focused on the AR experience itself. 
 - Sometimes, however, an app needs to have onscreen controls.
-- In those cases, make the controls as simple as possible. 
+ - In those cases, make the controls as simple as possible. 
 - Ideally, a user should be able to trigger an action without looking at it. 
-- Think of the camera button on your phone. 
-- It’s big, it’s not labeled, and you can tap it almost without thinking about it.
+ - Think of the camera button on your phone. 
+ - It’s big, it’s not labeled, and you can tap it almost without thinking about it.
 - Maintain the continuity of the experience. 
-- Try to avoid taking the user out of a scene too often. 
-- For instance, if users need to select, customize, or share an AR object, try to figure out a way they can do it without leaving AR.
+ - Try to avoid taking the user out of a scene too often. 
+ - For instance, if users need to select, customize, or share an AR object, try to figure out a way they can do it without leaving AR.
 
 #### Onboarding and Instructions
 - Provide an onboarding flow within the experience
 - Let users launch AR quickly. 
 - Make your tutorial a part of the main experience flow. 
 - Avoid teaching users all the key tasks or mechanics at once.
-- Rather, show them how to perform these tasks as they show up in the game. 
+ - Rather, show them how to perform these tasks as they show up in the game. 
 - Users won’t be overloaded with information, and they’ll be able to link helpful instructions and tips to the task at hand.
 - Gide the user visually
 - Use a combination of visual cues, motion, and animation to teach users. 
 - Illustrate and use in-app experiences as much as possible. 
 - Text instructions can take users out of the experience and make it harder to remember what they’re supposed to do.
-- For example, if you want users to swipe, give them an arrow or a hand icon rather than showing the word “swipe.”
+ - For example, if you want users to swipe, give them an arrow or a hand icon rather than showing the word “swipe.”
 - Use familiar UI patterns
 - Take advantage of your users’ knowledge. 
-- If there’s a standard UX interaction model for a certain action, such as tapping or dragging, use it! 
-- You won’t have to teach the user a whole new way to perform simple tasks, and you can dive right into the important part of your experience.
+ - If there’s a standard UX interaction model for a certain action, such as tapping or dragging, use it! 
+ - You won’t have to teach the user a whole new way to perform simple tasks, and you can dive right into the important part of your experience.
 
 #### Landscape and Portrait
 - Provide support for both portrait and landscape modes. 
