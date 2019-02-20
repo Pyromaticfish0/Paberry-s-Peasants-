@@ -210,11 +210,12 @@ for (AugmentedImage img : updatedAugmentedImages) {
 ### Ideas and Tips
 **********************************************************************************************************************************
 #### Automatic Placement
-It’s possible for the app itself to populate a scene. Once a surface is detected, the app can start placing objects immediately.
-Automatic placement works best when:
-- A virtual environment is added, without any user input, into the real-world space
-- There’s no interaction, or minimal interaction
-- It doesn’t matter if objects appear in exactly the right spot
+- It’s possible for the app itself to populate a scene. 
+- Once a surface is detected, the app can start placing objects immediately.
+- Automatic placement works best when:
+ - A virtual environment is added, without any user input, into the real-world space
+ - There’s no interaction, or minimal interaction
+ - It doesn’t matter if objects appear in exactly the right spot
 - AR mode is crucial to your experience
 - AR mode starts when the experience is launched
 
