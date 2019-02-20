@@ -21,6 +21,7 @@ In development by the Paberry-s-Peasants-
   * [Coin Balance](#coin-balance)
   * [Augmented Images](#augmented-images)
 * [Nonfunctional Requirements](#nonfunctional-requirements)
+* [Problems](#problems)
 
 ### System Requirements:
 **********************************************************************************************************************************
@@ -193,4 +194,44 @@ for (AugmentedImage img : updatedAugmentedImages) {
 ### Problems
 **********************************************************************************************************************************
 ##### The Physical Environment Problem
-Public spaces provide their own set of challenges for AR. Tracking and occlusion become difficult, depending on the number of objects and people around. Also, phone movement and AR immersion can be distracting or dangerous
+Public spaces provide their own set of challenges for AR: 
+- Tracking and occlusion become difficult, depending on the number of objects and people around
+- Phone movement and AR immersion can be distracting or dangerous
+
+##### Environmental Limitations
+For now, limitations that may hinder accurate understanding of surfaces include:
+- Flat surfaces without texture, such as a white desk
+- Environments with dim lighting
+- Extremely bright environments
+- Transparent or reflective surfaces like glass
+- Dynamic or moving surfaces, such as blades of grass or ripples in water
+Possible Solutions:
+- When users encounter environmental limitations, indicate what went wrong and point them in the right direction.
+
+##### User Movement
+The user will be moving around in a real-world space:
+- Let users know what movements will trigger the app
+- Guide them through the types and range of movement possible
+- Make easy transitions from one pose or movement to another
+- Design for comfort. Try to avoid making the user do anything that’s physically demanding, uncomfortable, or too sudden.
+- Try not to require movement until it’s necessary. Getting users to move is a great way to engage them, but let them ease into the experience.
+
+##### Accessibility
+If a user is not able to move around, give them an alternative way to use your app:
+- When the user is supposed to move closer to a target, give another way to access the target. 
+- Whenever it’s possible, let users tap objects and move them closer, or offer a reticle to help users reach faraway objects. 
+- Place text and instructions so they’re visible from every angle.
+- Let the user move and rotate an object in case they can’t physically move around it
+
+##### Safety & Comfort
+Sometimes, users can get too immersed in an AR experience. When they pay attention to the phone’s camera and ignore the real world, users can bump into objects, people, and might not notice hazards around them.
+- Build in reminders to look around, and sporadically remind them to check their surroundings.
+- Don’t make users walk backward
+- The danger of bumping into furniture, small animals, or other objects is much greater when a user is moving backward.
+- Avoid long play sessions
+- Users can get fatigued using AR for extended periods of time. 
+- Try to find stopping points in the action or moments when users might need to take a break.
+- Holding your phone for a prolonged period of time can be tiring. 
+- Encourage users to move around their phone or change the position they’re holding it in. 
+- You can also build resting points into the play cycle.
+- Let users pause or save their progress. Make it easy to continue an experience where they left off, even if they switch their physical location.
