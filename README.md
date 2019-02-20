@@ -190,3 +190,7 @@ for (AugmentedImage img : updatedAugmentedImages) {
 - The system will utilize a graphical user interface.
 - The system can analyze real life images and produce information based off of those 
 
+### Problems
+**********************************************************************************************************************************
+##### The Physical Environment Problem
+Public spaces provide their own set of challenges for AR. Tracking and occlusion become difficult, depending on the number of objects and people around. Also, phone movement and AR immersion can be distracting or dangerous
