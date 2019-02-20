@@ -67,36 +67,47 @@ In development by the Paberry-s-Peasants-
 ### Functional Requirements
 **********************************************************************************************************************************
 #### Main Menu
-
-After initial application launch, the system will display a main menu consisting of the following buttons: play, shop, and quit.
+- After initial application launch, the system will display a main menu consisting of the following buttons: 
+- Play
+- Missions
+- Shop
+- Quit
 
 #### Play Button
+- The play button resides within the main menu. 
+- After touching play, the main menu will disappear, and the system will begin utilizing the camera. 
+- The game has officially started.
 
-The play button resides within the main menu. After touching play, the main menu will disappear, and the system will begin utilizing the camera. The game has officially started.
+#### Missions Button
+- The shop button resides in the main menu. 
+- After touching shop, the user is take to the shop page.
 
 #### Shop Button
-
-The shop button resides in the main menu. After touching shop, the user is take to the shop page.
+- The shop button resides in the main menu. 
+- After touching shop, the user is take to the shop page.
 
 #### Quit Button
+- The quit button resides in the main menu. 
+- After touching quit, the application will exit.
 
-The quit button resides in the main menu. after touching quit, the application will exit.
+#### Back Button
+- resides in the HUD
+- allows users to go back to main menu
+
+#### Missions Page
+- The missions page is opened by touching missions in the main menu during gameplay. 
+- The missions page will inform the user of their current in-game objective.
 
 #### Shop Page
-
-Users can spend their coins on in-game skins.
+- Users can spend their coins on in-game skins.
 
 #### Head-up Display
-
-The HUD will allow users to view their coin balance and mission log during gameplay.
+- The HUD will allow users to view their coin balance. 
+- The HUD will allow users to exit AR utilizing back button.
 
 #### Coin Balance
-
-Coins are collected throughout the game’s campaign. The coins are used as a form of in-game currency to purchase in-game skins in the store page.
-
-#### Mission Log
-
-The mission log is opened by touching mission log in the HUD during gameplay. The mission log will inform the user of their current in-game objective.
+- Coins are collected throughout the gameplay.
+- The coins are used as a form of in-game currency to purchase in-game skins in the store page.
 
 #### Augmented Images
 - The system will scan room numbers which will trigger AR events.
@@ -105,7 +116,6 @@ The mission log is opened by touching mission log in the HUD during gameplay. Th
 - Augmented Images in ARCore lets you build AR apps that can respond to 2D images, such as posters or product packaging, in the user's environment. You provide a set of reference images, and ARCore tracking tells you where those images are physically located in an AR session, once they are detected in the camera view.
 
 ##### Is Augmented Images is Suitable for our App
-
 - Each image database can store feature point information for up to 1000 reference images.
 - ARCore can track up to 20 images simultaneously in the environment, but it cannot track multiple instances of the same image.
 - The physical image in the environment must be at least 15cm x 15cm and must be flat (for example, not wrinkled or wrapped around a bottle)
@@ -137,7 +147,6 @@ The mission log is opened by touching mission log in the HUD during gameplay. Th
 - Create a new empty database. Then add reference images one at a time.
 
 ##### Load Saved Image Database
-
 - Use ```AugmentedImageDatabase.deserialize()``` to load an existing image database:
 ```java
 InputStream inputStream = context.getAssets().open("example.imgdb");
@@ -146,14 +155,12 @@ AugmentedImageDatabase imageDatabase = AugmentedImageDatabase.deserialize(inputS
 - Image databases can be created using the ```arcoreimg``` command line tool during development, or by calling ``` AugmentedImageDatabase.serialize()``` on a database that contains that is loaded in memory.
 
 ##### Create New Empty Database
-
 - To create an empty image database at runtime, use the no-arg ```AugmentedImageDatabase()``` constructor:
 ```java
 AugmentedImageDatabase imageDatabase = new AugmentedImageDatabase();
 ```
 
 ##### Add Images to Existing Database
-
 - Add images to your image database by calling ```AugmentedImageDatabase.addImage()``` for each image:
 ```java
 Bitmap bitmap;
@@ -167,7 +174,6 @@ int index = imageDatabase.addImage("dog", bitmap, imageWidthInMeters);
 - The returned indexes can later be used to identify which reference image was detected.
 
 ##### Enable Image Tracking
-
 - Configure your ARCore session to begin tracking images by setting the session config to one that is configured with the desired image database:
 ```java
 config.setAugmentedImageDatabase(imageDatabase);
