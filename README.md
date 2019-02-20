@@ -35,7 +35,7 @@ In development by the Paberry-s-Peasants-
   * [Environmental Limitations](#environmental-limitations)
   * [User Movement](#user-movement)
   * [Accessibility](#accessibility)
-  * [Safety and Comfort](#safety-and comfort)  
+  * [Safety and Comfort](#safety-and-comfort)  
   
 ### System Requirements:
 **********************************************************************************************************************************
