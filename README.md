@@ -24,7 +24,8 @@ In development by the Paberry-s-Peasants-
 
 ### System Requirements:
 **********************************************************************************************************************************
-- Android 7.0 or higher
+- ARCore supported phone
+- Android SDK 7.0 (API Level 24) or later
 - Preferred resolution of 720×1280 pixels (Not optimized for tablet)
 - Strong internet connection (Wi-Fi, 3G, or 4G)
 - GPS and Location Services
