@@ -40,6 +40,7 @@ In development by the Paberry-s-Peasants-
 ### System Requirements:
 **********************************************************************************************************************************
 - ARCore supported phone
+
   https://developers.google.com/ar/discover/supported-devices
 - Android SDK 7.0 (API Level 24) or later
 - Preferred resolution of 720×1280 pixels (Not optimized for tablet)
