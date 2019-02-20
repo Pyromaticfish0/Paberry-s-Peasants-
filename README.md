@@ -185,11 +185,40 @@ for (AugmentedImage img : updatedAugmentedImages) {
 - https://developers.google.com/ar/develop/java/augmented-images/
 - https://developers.google.com/ar/develop/java/augmented-images/guide
 
+
 ### Non-Functional Requirements
 **********************************************************************************************************************************
 - The system will run on Android 7.0 or above.
 - The system will utilize a graphical user interface.
 - The system can analyze real life images and produce information based off of those 
+
+### Ideas to Implement
+**********************************************************************************************************************************
+#### Automatic Placement
+It’s possible for the app itself to populate a scene. Once a surface is detected, the app can start placing objects immediately.
+Automatic placement works best when:
+
+- A virtual environment is added, without any user input, into the real-world space
+- There’s no interaction, or minimal interaction
+- It doesn’t matter if objects appear in exactly the right spot
+- AR mode is crucial to your experience
+- AR mode starts when the experience is launched
+
+#### Scale and gameplay
+Playing with scale can add an unexpected aspect to an experience. Being surprised by a huge virtual character, depending on your intention, can be either hilariously surprising or absolutely terrifying. Depending on your goals and the effect you’re trying to create, you can use surprise as a tool to evoke different emotions, whether a horror game or a silly playground.
+You can also communicate scale with sound effects. Alter the scale and pitch of a sound to deepen the user’s immersion in your experience.
+
+#### Initialization
+- Make a clear transition into AR
+- Use visuals to let users know they’re about to transition from a 2D screen into AR. 
+- You can dim the phone display or use effects to blur the screen when a transition is about to take place.
+- In some apps, only one part of the experience will take place in AR.
+- Try to give the user a seamless transition to AR. 
+- Let the user launch the transition from a 2D interface to AR. 
+- It’s less jarring when the user is in control.
+- You can include a button, such as an AR icon, to let users trigger the launch themselves.
+- Send the user gently into your AR environment. Use an easy transition, like an animation or a fade out.
+- To transition the user into AR, fade from a 2D screen to the AR experience
 
 ### Problems
 **********************************************************************************************************************************
