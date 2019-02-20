@@ -192,7 +192,7 @@ for (AugmentedImage img : updatedAugmentedImages) {
 - The system will utilize a graphical user interface.
 - The system can analyze real life images and produce information based off of those 
 
-### Ideas to Implement
+### Ideas and Tips
 **********************************************************************************************************************************
 #### Automatic Placement
 It’s possible for the app itself to populate a scene. Once a surface is detected, the app can start placing objects immediately.
@@ -220,14 +220,85 @@ You can also communicate scale with sound effects. Alter the scale and pitch of 
 - Send the user gently into your AR environment. Use an easy transition, like an animation or a fade out.
 - To transition the user into AR, fade from a 2D screen to the AR experience
 
-### Problems
-**********************************************************************************************************************************
-##### The Physical Environment Problem
+#### Interface
+- Create a world that’s immersive and easy to use
+- Immerse users, don’t distract them.
+- Try to interrupt your AR world as little as you can. 
+- Get users into the experience, and then get out of the way.
+- Avoid pop-ups and full-screen takeovers unless the user explicitly selects it. 
+- Buttons, 2D alerts, and notifications can distract the user from the 3D world that you’re creating around them. 
+- Instead, let users focus on the scene itself.
+- Persistent 2D overlays can also disrupt the user’s immersion. 
+- It’s a constant reminder that the world they’re looking at isn’t completely real.
+- Sudden pop-ups and quick transitions can break the immersive AR experience.
+
+#### Easy Controls
+- Make the controls so easy, users won’t have to think about what they mean
+- It’s best to keep the user focused on the AR experience itself. 
+- Sometimes, however, an app needs to have onscreen controls.
+- In those cases, make the controls as simple as possible. 
+- Ideally, a user should be able to trigger an action without looking at it. 
+- Think of the camera button on your phone. 
+- It’s big, it’s not labeled, and you can tap it almost without thinking about it.
+- Maintain the continuity of the experience. 
+- Try to avoid taking the user out of a scene too often. 
+- For instance, if users need to select, customize, or share an AR object, try to figure out a way they can do it without leaving AR.
+
+#### Onboarding and Instructions
+- Provide an onboarding flow within the experience
+- Let users launch AR quickly. 
+- Make your tutorial a part of the main experience flow. 
+- Avoid teaching users all the key tasks or mechanics at once.
+- Rather, show them how to perform these tasks as they show up in the game. 
+- Users won’t be overloaded with information, and they’ll be able to link helpful instructions and tips to the task at hand.
+- Gide the user visually
+- Use a combination of visual cues, motion, and animation to teach users. 
+- Illustrate and use in-app experiences as much as possible. 
+- Text instructions can take users out of the experience and make it harder to remember what they’re supposed to do.
+- For example, if you want users to swipe, give them an arrow or a hand icon rather than showing the word “swipe.”
+- Use familiar UI patterns
+- Take advantage of your users’ knowledge. 
+- If there’s a standard UX interaction model for a certain action, such as tapping or dragging, use it! 
+- You won’t have to teach the user a whole new way to perform simple tasks, and you can dive right into the important part of your experience.
+
+#### Landscape and Portrait
+- Provide support for both portrait and landscape modes. 
+- If this isn’t possible, select the one that’s best for your experience.
+- Supporting both modes creates a more immersive experience and increases user comfort.
+- Think about camera and button placement for each mode. 
+- Pay attention to how camera positioning affects depth sensing, spatial awareness, and accurate surface measurements in each mode.
+- Rotate the UI and avoid cutting the camera feed.
+
+#### Errors
+- Help users easily recover from missteps and errors.
+- Whether the error came from the system or the user, make it easy to get back into the experience. 
+- Use a combination of visual cues, animation, and text to show a clear path to resolution.
+- You can communicate what went wrong, especially if it helps avoid that error in the future. 
+- Avoid blaming the user. 
+- Focus on getting the user to take the right action.
+- Sample error states can include:
+ - A dark environment: 
+  - Too dark to scan. 
+  - Try turning on the lights or moving to a well-lit area.
+ - User moving device too fast: 
+  - Device moving too fast. 
+  - Try moving more slowly.
+ - User blocking the sensor or camera: 
+  - Looks like the sensor is blocked. 
+  - Try moving your finger or adjusting the device’s position..
+
+#### Permissions
+- Clearly tell users why the app needs certain permissions.
+- Ask for permissions only when it’s necessary for users to move forward with the experience.
+- Be clear about the relevance and benefits of each permission. 
+- For instance, if the app needs access to the camera for AR to work, or the user’s position for multiplayer experiences, let them know.
+
+#### The Physical Environment Problem
 Public spaces provide their own set of challenges for AR: 
 - Tracking and occlusion become difficult, depending on the number of objects and people around
 - Phone movement and AR immersion can be distracting or dangerous
 
-##### Environmental Limitations
+#### Environmental Limitations
 For now, limitations that may hinder accurate understanding of surfaces include:
 - Flat surfaces without texture, such as a white desk
 - Environments with dim lighting
@@ -237,7 +308,7 @@ For now, limitations that may hinder accurate understanding of surfaces include:
 Possible Solutions:
 - When users encounter environmental limitations, indicate what went wrong and point them in the right direction.
 
-##### User Movement
+#### User Movement
 The user will be moving around in a real-world space:
 - Let users know what movements will trigger the app
 - Guide them through the types and range of movement possible
@@ -245,14 +316,14 @@ The user will be moving around in a real-world space:
 - Design for comfort. Try to avoid making the user do anything that’s physically demanding, uncomfortable, or too sudden.
 - Try not to require movement until it’s necessary. Getting users to move is a great way to engage them, but let them ease into the experience.
 
-##### Accessibility
+#### Accessibility
 If a user is not able to move around, give them an alternative way to use your app:
 - When the user is supposed to move closer to a target, give another way to access the target. 
 - Whenever it’s possible, let users tap objects and move them closer, or offer a reticle to help users reach faraway objects. 
 - Place text and instructions so they’re visible from every angle.
 - Let the user move and rotate an object in case they can’t physically move around it
 
-##### Safety & Comfort
+#### Safety & Comfort
 Sometimes, users can get too immersed in an AR experience. When they pay attention to the phone’s camera and ignore the real world, users can bump into objects, people, and might not notice hazards around them.
 - Build in reminders to look around, and sporadically remind them to check their surroundings.
 - Don’t make users walk backward
