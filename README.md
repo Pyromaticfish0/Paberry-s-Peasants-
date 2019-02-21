@@ -91,10 +91,6 @@ In development by the Paberry-s-Peasants-
 - The quit button resides in the main menu. 
 - After touching quit, the application will exit.
 
-#### Back Button
-- resides in the HUD
-- allows users to go back to main menu
-
 #### Missions Page
 - The missions page is opened by touching missions in the main menu during gameplay. 
 - The missions page will inform the user of their current in-game objective.
