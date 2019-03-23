@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea1208cb4bfc946f7aa1d7b5348cb086, type: 3}
+  m_Name: New Database
+  m_EditorClassIdentifier: 
+  m_Images:
+  - Name: B112
+    Width: 0
+    Quality: 75
+    TextureGUID: 59adc51b65773834090628dec4adb283
+  - Name: B205
+    Width: 0
+    Quality: 75
+    TextureGUID: 7c010732834f703408c6db4017835c1a
+  - Name: Eng_Tech F.1
+    Width: 0
+    Quality: 70
+    TextureGUID: 5d8b1145d069b2740a49d6c11976f93a
+  - Name: DP Labs Poster
+    Width: 0
+    Quality: 75
+    TextureGUID: a8ff98836cbd671488c7c3ab53693f79
+  - Name: B270_EE
+    Width: 0
+    Quality: 80
+    TextureGUID: 23901cbef59e1944691c0d8141735cbe
+  - Name: Disco_LoungeUNT
+    Width: 0
+    Quality: 95
+    TextureGUID: db502f256239f894c8e26fc281862db5
+  m_RawData: 
+  m_IsRawDataDirty: 1
+  m_CliVersion: 1.2
